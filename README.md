@@ -12,7 +12,7 @@ Test on Arduino Mega with enc28j60 ethershield and the ethercard library : https
 Features:
 
     No link with hardware
-    Auto send heartbeat messages and answer to heartbeat request
+    Auto send heartbeat messages
     Parse received xPL messages and send result to a callback define by you
     Send xPL message 
 
