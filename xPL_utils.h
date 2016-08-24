@@ -38,6 +38,7 @@
 #define	XPL_TYPE_ID_MAX			8
 #define XPL_NAME_LENGTH_MAX		16
 #define XPL_VALUE_LENGTH_MAX	32  // should be 128 but need to spare RAM
+#define IP_MAX	16
 
 #define	XPL_HOP_COUNT_PARSER	PSTR("hop=%d")
 #define	XPL_SOURCE_PARSER		PSTR("source=%8[^-]-%8[^'.'].%16s")
@@ -51,6 +52,7 @@ struct struct_id			// source or target
     char vendor_id[XPL_VENDOR_ID_MAX+1];		// vendor id
     char device_id[XPL_DEVICE_ID_MAX+1];		// device id
     char instance_id[XPL_INSTANCE_ID_MAX+1];		// instance id
+    char ip[IP_MAX+1];		// ip
 };
 
 typedef struct struct_xpl_schema struct_xpl_schema;
