@@ -175,9 +175,7 @@ void xPL::SendHBeat()
   last_heartbeat = millis();
   char buffer[XPL_MESSAGE_BUFFER_MAX];
 
-//  sprintf_P(buffer, PSTR("xpl-stat\n{\nhop=1\nsource=%s-%s.%s\ntarget=*\n}\n%s.%s\n{\ninterval=%d\n}\n"), source.vendor_id, source.device_id, source.instance_id, XPL_HBEAT_ANSWER_CLASS_ID, XPL_HBEAT_ANSWER_TYPE_ID, hbeat_interval);
-
-  sprintf_P(buffer, PSTR("xpl-stat\n{\nhop=1\nsource=%s-%s.%s\ntarget=*\n}\n%s.%s\n{\ninterval=%d\nport=3865\nremote-ip=192.168.4.133\nversion=1.0\n}\n"), source.vendor_id, source.device_id, source.instance_id, XPL_HBEAT_ANSWER_CLASS_ID, XPL_HBEAT_ANSWER_TYPE_ID, hbeat_interval);
+  sprintf_P(buffer, PSTR("xpl-stat\n{\nhop=1\nsource=%s-%s.%s\ntarget=*\n}\n%s.%s\n{\ninterval=%d\nport=3865\nremote-ip=%s\nversion=1.0\n}\n"), source.vendor_id, source.device_id, source.instance_id, XPL_HBEAT_ANSWER_CLASS_ID, XPL_HBEAT_ANSWER_TYPE_ID, hbeat_interval, source.ip,);
 
   //(*SendExternal)(buffer);
   SendMessage(buffer);
