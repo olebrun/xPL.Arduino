@@ -67,7 +67,7 @@ class xPL
 	void SendMessage(char *);
 	void SendMessage(xPL_Message *, bool = true);
 
-	void SetSource_P(const PROGMEM char *,const PROGMEM char *,const PROGMEM char *);  // define my source
+	void SetSource_P(const PROGMEM char *,const PROGMEM char *,const PROGMEM char *, const PROGMEM char *);  // define my source
 
 #ifdef ENABLE_PARSING
 	xPLAfterParseAction AfterParseAction;
