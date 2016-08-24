@@ -56,7 +56,7 @@ void setup()
   Udp.begin(xpl.udp_port);  
   
   xpl.SendExternal = &SendUdPMessage;  // pointer to the send callback 
-  xpl.SetSource_P(PSTR("xpl"), PSTR("arduino"), PSTR("test")); // parameters for hearbeat message
+  xpl.SetSource_P(PSTR("xpl"), PSTR("arduino"), PSTR("test"), PSTR('10.0.0.177')); // parameters for hearbeat message
 }
 
 void loop()
