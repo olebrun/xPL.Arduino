@@ -69,7 +69,7 @@ void setup()
   
   xpl.SendExternal = &SendUdPMessage;  // pointer to the send callback
   xpl.AfterParseAction = &AfterParseAction;  // pointer to a post parsing action callback 
-  xpl.SetSource_P(PSTR("xpl"), PSTR("arduino"), PSTR("test")); // parameters for hearbeat message
+  xpl.SetSource_P(PSTR("xpl"), PSTR("arduino"), PSTR("test"), PSTR("10.0.0.177")); // parameters for hearbeat message
 }
 
 void loop()
