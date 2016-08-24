@@ -55,7 +55,7 @@ void setup()
   ether.staticSetup(myip, gwip);
  
   xpl.SendExternal = &SendUdPMessage;  // pointer to the send callback
-  xpl.SetSource_P(PSTR("xpl"), PSTR("arduino"), PSTR("test")); // parameters for hearbeat message
+  xpl.SetSource_P(PSTR("xpl"), PSTR("arduino"), PSTR("test"), PSTR('192.168.0.133')); // parameters for hearbeat message
 }
 
 void loop()
