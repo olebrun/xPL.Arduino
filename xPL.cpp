@@ -71,11 +71,12 @@ xPL::~xPL()
 }
 
 /// Set the source of outgoing xPL messages
-void xPL::SetSource_P(const PROGMEM char * _vendorId, const PROGMEM char * _deviceId, const PROGMEM char * _instanceId)
+void xPL::SetSource_P(const PROGMEM char * _vendorId, const PROGMEM char * _deviceId, const PROGMEM char * _instanceId, const PROGMEM char * _ip)
 {
 	memcpy_P(source.vendor_id, _vendorId, XPL_VENDOR_ID_MAX);
 	memcpy_P(source.device_id, _deviceId, XPL_DEVICE_ID_MAX);
 	memcpy_P(source.instance_id, _instanceId, XPL_INSTANCE_ID_MAX);
+	memcpy_P(source.ip, _ip, IP_MAX);
 }
 
 /**
