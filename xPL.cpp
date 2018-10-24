@@ -101,7 +101,10 @@ void xPL::SendMessage(xPL_Message *_message, bool _useDefaultSource)
 		_message->SetSource(source.vendor_id, source.device_id, source.instance_id);
 	}
 
-    SendMessage(_message->toString());
+    char *message_buffer = _message->toString();
+    SendMessage(message_buffer);
+    free(message_buffer);
+
 }
 
 #ifdef ENABLE_PARSING
