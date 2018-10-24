@@ -142,8 +142,8 @@ bool xPL_Message::AddCommand(char* _name, char* _value)
  */
 char* xPL_Message::toString()
 {
-  char message_buffer[XPL_MESSAGE_BUFFER_MAX];
-  int pos;
+  char *message_buffer = malloc(XPL_MESSAGE_BUFFER_MAX);
+  int pos = 0;
 
   clearStr(message_buffer);
 
